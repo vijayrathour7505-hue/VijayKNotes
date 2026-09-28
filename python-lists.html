@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lists - VijayKNotes</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .chapter-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .chapter-header {
+            background: linear-gradient(135deg, #306998, #4b8bbe);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .note-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .note-section h2 {
+            color: #306998;
+            margin-bottom: 15px;
+        }
+
+        .note-section h3 {
+            color: #444;
+            margin-top: 20px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .output {
+            background: #f3f3f3;
+            padding: 15px;
+            border-left: 5px solid #306998;
+            border-radius: 6px;
+            margin: 10px 0 20px;
+        }
+
+        .important {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            background: #306998;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">VijayKNotes</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="python.html">Python Notes</a>
+    </nav>
+</header>
+
+<main class="chapter-container">
+
+<a href="python.html" class="back-button">← Back to Python Notes</a>
+
+<div class="chapter-header">
+    <h1>Chapter 8: Python Lists</h1>
+    <p>Complete BCA(AI) Notes – Theory, Examples, Outputs & Practice</p>
+</div>
+
+
+<section class="note-section">
+    <h2>1. What is a List?</h2>
+
+    <p>
+        A <strong>list</strong> is an ordered collection of elements.
+        Lists are one of the most commonly used data structures in Python.
+    </p>
+
+    <p>
+        A list can store multiple values in a single variable.
+        It can contain numbers, strings, Boolean values and even other lists.
+    </p>
+
+    <pre><code>numbers = [10, 20, 30, 40]
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [10, 20, 30, 40]
+    </div>
+
+    <div class="important">
+        <strong>Important:</strong>
+        Lists are ordered, mutable and allow duplicate values.
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>2. Creating a List</h2>
+
+    <pre><code>names = ["Vijay", "Aman", "Rahul"]
+
+marks = [80, 75, 90]
+
+mixed = ["Python", 100, True, 25.5]
+
+print(names)
+print(marks)
+print(mixed)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        ['Vijay', 'Aman', 'Rahul']<br>
+        [80, 75, 90]<br>
+        ['Python', 100, True, 25.5]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>3. List Indexing</h2>
+
+    <p>
+        List indexing starts from <strong>0</strong>.
+    </p>
+
+    <pre><code>fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits[0])
+print(fruits[1])
+print(fruits[2])</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        Apple<br>
+        Banana<br>
+        Mango
+    </div>
+
+    <h3>Negative Indexing</h3>
+
+    <pre><code>fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits[-1])
+print(fruits[-2])</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        Mango<br>
+        Banana
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>4. List Slicing</h2>
+
+    <p>
+        Slicing is used to extract a portion of a list.
+    </p>
+
+    <pre><code>numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+print(numbers[:3])
+print(numbers[2:])</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [20, 30, 40]<br>
+        [10, 20, 30]<br>
+        [30, 40, 50]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>5. Changing List Elements</h2>
+
+    <p>
+        Lists are mutable, which means their elements can be changed.
+    </p>
+
+    <pre><code>marks = [70, 80, 90]
+
+marks[1] = 95
+
+print(marks)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [70, 95, 90]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>6. Adding Elements</h2>
+
+    <h3>append()</h3>
+
+    <p>
+        append() adds an element at the end of the list.
+    </p>
+
+    <pre><code>numbers = [10, 20, 30]
+
+numbers.append(40)
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [10, 20, 30, 40]
+    </div>
+
+
+    <h3>insert()</h3>
+
+    <p>
+        insert() adds an element at a specified position.
+    </p>
+
+    <pre><code>numbers = [10, 20, 30]
+
+numbers.insert(1, 15)
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [10, 15, 20, 30]
+    </div>
+
+
+    <h3>extend()</h3>
+
+    <p>
+        extend() adds multiple elements to a list.
+    </p>
+
+    <pre><code>a = [1, 2, 3]
+b = [4, 5, 6]
+
+a.extend(b)
+
+print(a)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [1, 2, 3, 4, 5, 6]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>7. Removing Elements</h2>
+
+    <h3>remove()</h3>
+
+    <pre><code>numbers = [10, 20, 30, 40]
+
+numbers.remove(30)
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [10, 20, 40]
+    </div>
+
+    <h3>pop()</h3>
+
+    <p>
+        pop() removes an element using its index.
+    </p>
+
+    <pre><code>numbers = [10, 20, 30]
+
+numbers.pop(1)
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [10, 30]
+    </div>
+
+    <h3>clear()</h3>
+
+    <pre><code>numbers = [10, 20, 30]
+
+numbers.clear()
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        []
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>8. List Length</h2>
+
+    <p>
+        len() returns the number of elements in a list.
+    </p>
+
+    <pre><code>names = ["Vijay", "Aman", "Rahul"]
+
+print(len(names))</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        3
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>9. Checking an Element</h2>
+
+    <p>
+        The <strong>in</strong> operator checks whether an element exists
+        in a list.
+    </p>
+
+    <pre><code>fruits = ["Apple", "Mango", "Banana"]
+
+print("Mango" in fruits)
+print("Orange" in fruits)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        True<br>
+        False
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>10. Sorting a List</h2>
+
+    <h3>sort()</h3>
+
+    <pre><code>numbers = [50, 10, 40, 20, 30]
+
+numbers.sort()
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [10, 20, 30, 40, 50]
+    </div>
+
+    <h3>Descending Order</h3>
+
+    <pre><code>numbers = [50, 10, 40, 20, 30]
+
+numbers.sort(reverse=True)
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [50, 40, 30, 20, 10]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>11. reverse() Method</h2>
+
+    <pre><code>numbers = [10, 20, 30, 40]
+
+numbers.reverse()
+
+print(numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [40, 30, 20, 10]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>12. count() Method</h2>
+
+    <p>
+        count() tells how many times an element occurs in a list.
+    </p>
+
+    <pre><code>numbers = [10, 20, 10, 30, 10]
+
+print(numbers.count(10))</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        3
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>13. index() Method</h2>
+
+    <p>
+        index() returns the position of the first occurrence of an element.
+    </p>
+
+    <pre><code>names = ["Vijay", "Aman", "Rahul"]
+
+print(names.index("Rahul"))</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        2
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>14. Copying a List</h2>
+
+    <p>
+        The copy() method creates a copy of a list.
+    </p>
+
+    <pre><code>numbers = [10, 20, 30]
+
+new_numbers = numbers.copy()
+
+print(new_numbers)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [10, 20, 30]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>15. Looping Through a List</h2>
+
+    <p>
+        A for loop can be used to access every element of a list.
+    </p>
+
+    <pre><code>fruits = ["Apple", "Banana", "Mango"]
+
+for fruit in fruits:
+    print(fruit)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        Apple<br>
+        Banana<br>
+        Mango
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>16. List of Numbers and Calculations</h2>
+
+    <pre><code>marks = [80, 70, 90, 85, 75]
+
+print("Maximum =", max(marks))
+print("Minimum =", min(marks))
+print("Total =", sum(marks))
+print("Number of Marks =", len(marks))</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        Maximum = 90<br>
+        Minimum = 70<br>
+        Total = 400<br>
+        Number of Marks = 5
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>17. Nested Lists</h2>
+
+    <p>
+        A list can contain another list. Such a structure is called
+        a nested list.
+    </p>
+
+    <pre><code>students = [
+    ["Vijay", 85],
+    ["Aman", 90],
+    ["Rahul", 78]
+]
+
+print(students[0])
+print(students[0][0])
+print(students[0][1])</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        ['Vijay', 85]<br>
+        Vijay<br>
+        85
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>18. List Comprehension</h2>
+
+    <p>
+        List comprehension provides a short and readable way to create
+        a new list.
+    </p>
+
+    <pre><code>squares = [x * x for x in range(1, 6)]
+
+print(squares)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [1, 4, 9, 16, 25]
+    </div>
+
+    <h3>With Condition</h3>
+
+    <pre><code>even = [x for x in range(1, 11) if x % 2 == 0]
+
+print(even)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        [2, 4, 6, 8, 10]
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>19. Lists in AI and Data Processing</h2>
+
+    <p>
+        Lists are very useful in Artificial Intelligence and Data Science.
+        They can store collections of data such as values, features,
+        labels and text records.
+    </p>
+
+    <ul>
+        <li>Student marks</li>
+        <li>Training data</li>
+        <li>Feature values</li>
+        <li>Class labels</li>
+        <li>Text tokens</li>
+        <li>Sensor readings</li>
+        <li>Prediction results</li>
+    </ul>
+
+    <h3>Example</h3>
+
+    <pre><code>temperatures = [30, 32, 31, 35, 33]
+
+average = sum(temperatures) / len(temperatures)
+
+print("Average =", average)</code></pre>
+
+    <div class="output">
+        <strong>Output:</strong><br>
+        Average = 32.2
+    </div>
+
+    <p>
+        In real AI applications, large datasets are usually handled
+        using specialized libraries such as NumPy and Pandas, but
+        understanding Python lists is an important foundation.
+    </p>
+</section>
+
+
+<section class="note-section">
+    <h2>20. Common List Mistakes</h2>
+
+    <ul>
+        <li>Using an index that does not exist.</li>
+        <li>Forgetting that indexing starts from 0.</li>
+        <li>Confusing append() and extend().</li>
+        <li>Using remove() with an index instead of a value.</li>
+        <li>Forgetting brackets [ ].</li>
+        <li>Changing a list while incorrectly iterating through it.</li>
+    </ul>
+
+    <div class="important">
+        <strong>Example:</strong>
+        <br>
+        <code>numbers.remove(20)</code> removes the value 20,
+        while <code>numbers.pop(2)</code> removes the element at index 2.
+    </div>
+</section>
+
+
+<section class="note-section">
+    <h2>21. Practice Programs</h2>
+
+    <h3>Program 1: Find Sum of List</h3>
+
+    <pre><code>numbers = [10, 20, 30, 40, 50]
+
+print("Sum =", sum(numbers))</code></pre>
+
+
+    <h3>Program 2: Find Largest Number</h3>
+
+    <pre><code>numbers = [25, 80, 45, 90, 60]
+
+print("Largest =", max(numbers))</code></pre>
+
+
+    <h3>Program 3: Find Smallest Number</h3>
+
+    <pre><code>numbers = [25, 80, 45, 90, 60]
+
+print("Smallest =", min(numbers))</code></pre>
+
+
+    <h3>Program 4: Count Even Numbers</h3>
+
+    <pre><code>numbers = [10, 15, 20, 25, 30, 35]
+
+count = 0
+
+for number in numbers:
+    if number % 2 == 0:
+        count += 1
+
+print("Even numbers =", count)</code></pre>
+
+
+    <h3>Program 5: Take List Input</h3>
+
+    <pre><code>numbers = []
+
+for i in range(5):
+    number = int(input("Enter number: "))
+    numbers.append(number)
+
+print("List =", numbers)</code></pre>
+</section>
+
+
+<section class="note-section">
+    <h2>22. Chapter Summary</h2>
+
+    <ul>
+        <li>List stores multiple values.</li>
+        <li>Lists are ordered and mutable.</li>
+        <li>Lists allow duplicate values.</li>
+        <li>Indexing starts from 0.</li>
+        <li>Negative indexing starts from the end.</li>
+        <li>Slicing extracts a portion of a list.</li>
+        <li>append(), insert() and extend() add elements.</li>
+        <li>remove(), pop() and clear() remove elements.</li>
+        <li>sort() sorts list elements.</li>
+        <li>reverse() reverses the list.</li>
+        <li>List comprehension creates lists efficiently.</li>
+        <li>Lists are important for basic AI and data processing.</li>
+    </ul>
+
+    <div class="important">
+        <strong>Exam Point:</strong>
+        Learn list indexing, slicing, methods, loops,
+        nested lists and list comprehension carefully.
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 VijayKNotes | BCA(AI) Python Notes</p>
+</footer>
+
+</body>
+</html>

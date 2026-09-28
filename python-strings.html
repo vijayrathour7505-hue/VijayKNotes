@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Strings - VijayKNotes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .chapter-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .chapter-header {
+            background: linear-gradient(135deg, #306998, #4b8bbe);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .chapter-header h1 {
+            margin-bottom: 10px;
+        }
+
+        .note-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .note-section h2 {
+            color: #306998;
+            margin-bottom: 15px;
+        }
+
+        .note-section h3 {
+            color: #444;
+            margin-top: 20px;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        .output {
+            background: #f3f3f3;
+            padding: 15px;
+            border-left: 5px solid #306998;
+            border-radius: 6px;
+            margin: 10px 0 20px;
+        }
+
+        .important {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .example {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            background: #306998;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 7px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">VijayKNotes</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="python.html">Python Notes</a>
+    </nav>
+</header>
+
+<main class="chapter-container">
+
+    <a href="python.html" class="back-button">← Back to Python Notes</a>
+
+    <div class="chapter-header">
+        <h1>Chapter 7: Python Strings</h1>
+        <p>Complete BCA(AI) Notes – Theory, Examples, Outputs & Practice</p>
+    </div>
+
+
+    <!-- 1 -->
+    <section class="note-section">
+        <h2>1. What is a String?</h2>
+
+        <p>
+            A <strong>string</strong> is a sequence of characters.
+            In Python, strings are used to store text such as names,
+            sentences, addresses, messages and other textual data.
+        </p>
+
+        <p>
+            Strings can be written inside single quotes,
+            double quotes or triple quotes.
+        </p>
+
+        <pre><code>name = "Vijay"
+city = 'Meerut'
+message = """Welcome to Python"""</code></pre>
+
+        <div class="output">
+            <strong>Example Values:</strong><br>
+            Vijay<br>
+            Meerut<br>
+            Welcome to Python
+        </div>
+
+        <div class="important">
+            <strong>Important:</strong>
+            Python strings are immutable. This means that once a string
+            is created, its individual characters cannot be changed directly.
+        </div>
+    </section>
+
+
+    <!-- 2 -->
+    <section class="note-section">
+        <h2>2. Creating Strings</h2>
+
+        <h3>Single Quotes</h3>
+
+        <pre><code>name = 'Vijay'
+print(name)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Vijay
+        </div>
+
+        <h3>Double Quotes</h3>
+
+        <pre><code>course = "BCA AI"
+print(course)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            BCA AI
+        </div>
+
+        <h3>Triple Quotes</h3>
+
+        <pre><code>text = """Python
+is
+easy"""
+
+print(text)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python<br>
+            is<br>
+            easy
+        </div>
+    </section>
+
+
+    <!-- 3 -->
+    <section class="note-section">
+        <h2>3. String Indexing</h2>
+
+        <p>
+            Indexing is used to access individual characters of a string.
+            Python indexing starts from <strong>0</strong>.
+        </p>
+
+        <pre><code>name = "Python"
+
+print(name[0])
+print(name[1])
+print(name[5])</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            P<br>
+            y<br>
+            n
+        </div>
+
+        <h3>Negative Indexing</h3>
+
+        <p>
+            Negative indexing starts from the end of the string.
+        </p>
+
+        <pre><code>name = "Python"
+
+print(name[-1])
+print(name[-2])</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            n<br>
+            o
+        </div>
+    </section>
+
+
+    <!-- 4 -->
+    <section class="note-section">
+        <h2>4. String Slicing</h2>
+
+        <p>
+            Slicing is used to extract a part of a string.
+        </p>
+
+        <h3>Syntax</h3>
+
+        <pre><code>string[start:end]</code></pre>
+
+        <p>
+            The starting index is included but the ending index is excluded.
+        </p>
+
+        <pre><code>name = "Python"
+
+print(name[0:3])
+print(name[2:6])</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Pyt<br>
+            thon
+        </div>
+
+        <h3>Using Step</h3>
+
+        <pre><code>name = "Python"
+
+print(name[::2])</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Pto
+        </div>
+    </section>
+
+
+    <!-- 5 -->
+    <section class="note-section">
+        <h2>5. String Length – len()</h2>
+
+        <p>
+            The <strong>len()</strong> function returns the number of
+            characters present in a string.
+        </p>
+
+        <pre><code>name = "Vijay"
+
+print(len(name))</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            5
+        </div>
+    </section>
+
+
+    <!-- 6 -->
+    <section class="note-section">
+        <h2>6. String Concatenation</h2>
+
+        <p>
+            Concatenation means joining two or more strings.
+            The <strong>+</strong> operator is used for concatenation.
+        </p>
+
+        <pre><code>first = "Vijay"
+last = "Rathour"
+
+full_name = first + " " + last
+
+print(full_name)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Vijay Rathour
+        </div>
+    </section>
+
+
+    <!-- 7 -->
+    <section class="note-section">
+        <h2>7. String Repetition</h2>
+
+        <p>
+            The <strong>*</strong> operator can repeat a string multiple times.
+        </p>
+
+        <pre><code>word = "Python "
+
+print(word * 3)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python Python Python
+        </div>
+    </section>
+
+
+    <!-- 8 -->
+    <section class="note-section">
+        <h2>8. Common String Methods</h2>
+
+        <p>
+            Python provides many built-in methods for processing strings.
+        </p>
+
+        <h3>upper()</h3>
+
+        <pre><code>text = "python"
+
+print(text.upper())</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            PYTHON
+        </div>
+
+        <h3>lower()</h3>
+
+        <pre><code>text = "PYTHON"
+
+print(text.lower())</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            python
+        </div>
+
+        <h3>capitalize()</h3>
+
+        <pre><code>text = "python programming"
+
+print(text.capitalize())</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python programming
+        </div>
+
+        <h3>title()</h3>
+
+        <pre><code>text = "python programming"
+
+print(text.title())</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python Programming
+        </div>
+
+        <h3>strip()</h3>
+
+        <p>
+            Removes extra spaces from the beginning and end.
+        </p>
+
+        <pre><code>text = "   Python   "
+
+print(text.strip())</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python
+        </div>
+    </section>
+
+
+    <!-- 9 -->
+    <section class="note-section">
+        <h2>9. replace() Method</h2>
+
+        <p>
+            The replace() method replaces one part of a string with another.
+        </p>
+
+        <pre><code>text = "I like Java"
+
+new_text = text.replace("Java", "Python")
+
+print(new_text)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            I like Python
+        </div>
+    </section>
+
+
+    <!-- 10 -->
+    <section class="note-section">
+        <h2>10. split() Method</h2>
+
+        <p>
+            The split() method divides a string into a list.
+        </p>
+
+        <pre><code>text = "Python is easy"
+
+words = text.split()
+
+print(words)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            ['Python', 'is', 'easy']
+        </div>
+    </section>
+
+
+    <!-- 11 -->
+    <section class="note-section">
+        <h2>11. join() Method</h2>
+
+        <p>
+            The join() method joins elements of a list into a string.
+        </p>
+
+        <pre><code>words = ["Python", "is", "easy"]
+
+sentence = " ".join(words)
+
+print(sentence)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python is easy
+        </div>
+    </section>
+
+
+    <!-- 12 -->
+    <section class="note-section">
+        <h2>12. find() Method</h2>
+
+        <p>
+            The find() method returns the index of the first occurrence
+            of a specified value.
+        </p>
+
+        <pre><code>text = "Python Programming"
+
+print(text.find("Programming"))</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            7
+        </div>
+    </section>
+
+
+    <!-- 13 -->
+    <section class="note-section">
+        <h2>13. count() Method</h2>
+
+        <p>
+            The count() method counts how many times a value occurs.
+        </p>
+
+        <pre><code>text = "banana"
+
+print(text.count("a"))</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            3
+        </div>
+    </section>
+
+
+    <!-- 14 -->
+    <section class="note-section">
+        <h2>14. Checking Strings</h2>
+
+        <h3>startswith()</h3>
+
+        <pre><code>text = "Python Programming"
+
+print(text.startswith("Python"))</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            True
+        </div>
+
+        <h3>endswith()</h3>
+
+        <pre><code>text = "Python.py"
+
+print(text.endswith(".py"))</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            True
+        </div>
+
+        <h3>isdigit()</h3>
+
+        <pre><code>text = "12345"
+
+print(text.isdigit())</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            True
+        </div>
+
+        <h3>isalpha()</h3>
+
+        <pre><code>text = "Python"
+
+print(text.isalpha())</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            True
+        </div>
+    </section>
+
+
+    <!-- 15 -->
+    <section class="note-section">
+        <h2>15. String Formatting</h2>
+
+        <p>
+            String formatting is used to insert variables into a string.
+        </p>
+
+        <h3>Using f-string</h3>
+
+        <pre><code>name = "Vijay"
+course = "BCA(AI)"
+
+print(f"My name is {name}")
+print(f"My course is {course}")</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            My name is Vijay<br>
+            My course is BCA(AI)
+        </div>
+
+        <div class="important">
+            <strong>Note:</strong>
+            f-strings are commonly used because they make string formatting
+            simple and readable.
+        </div>
+    </section>
+
+
+    <!-- 16 -->
+    <section class="note-section">
+        <h2>16. Escape Characters</h2>
+
+        <p>
+            Escape characters are used to represent special characters
+            inside strings.
+        </p>
+
+        <h3>New Line – \n</h3>
+
+        <pre><code>print("Python\nProgramming")</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python<br>
+            Programming
+        </div>
+
+        <h3>Tab – \t</h3>
+
+        <pre><code>print("Python\tProgramming")</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Python    Programming
+        </div>
+
+        <h3>Double Quote – \"</h3>
+
+        <pre><code>print("He said \"Hello\"")</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            He said "Hello"
+        </div>
+    </section>
+
+
+    <!-- 17 -->
+    <section class="note-section">
+        <h2>17. Strings are Immutable</h2>
+
+        <p>
+            Python strings cannot be changed character by character after
+            they are created.
+        </p>
+
+        <pre><code>text = "Python"
+
+# text[0] = "J"   # This will cause an error</code></pre>
+
+        <p>
+            Instead, create a new string.
+        </p>
+
+        <pre><code>text = "Python"
+
+text = "J" + text[1:]
+
+print(text)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            Jython
+        </div>
+    </section>
+
+
+    <!-- 18 -->
+    <section class="note-section">
+        <h2>18. String Membership Operators</h2>
+
+        <p>
+            The <strong>in</strong> and <strong>not in</strong> operators
+            check whether a value exists inside a string.
+        </p>
+
+        <pre><code>text = "Python Programming"
+
+print("Python" in text)
+print("Java" in text)
+print("Java" not in text)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            True<br>
+            False<br>
+            True
+        </div>
+    </section>
+
+
+    <!-- 19 -->
+    <section class="note-section">
+        <h2>19. Strings in AI and Data Processing</h2>
+
+        <p>
+            Strings are very important in Artificial Intelligence and
+            Data Science because a large amount of data is available in
+            textual form.
+        </p>
+
+        <p>Examples include:</p>
+
+        <ul>
+            <li>Chatbot messages</li>
+            <li>User reviews</li>
+            <li>Social media text</li>
+            <li>Customer feedback</li>
+            <li>Search queries</li>
+            <li>Natural Language Processing (NLP)</li>
+            <li>Text classification</li>
+            <li>Sentiment analysis</li>
+        </ul>
+
+        <h3>Example: Cleaning Text Data</h3>
+
+        <pre><code>text = "   Python is Amazing   "
+
+clean_text = text.strip().lower()
+
+print(clean_text)</code></pre>
+
+        <div class="output">
+            <strong>Output:</strong><br>
+            python is amazing
+        </div>
+
+        <p>
+            Such operations are often used as a basic step before
+            processing text in AI and machine learning applications.
+        </p>
+    </section>
+
+
+    <!-- 20 -->
+    <section class="note-section">
+        <h2>20. Common Mistakes</h2>
+
+        <ul>
+            <li>Forgetting quotation marks around text.</li>
+            <li>Using an invalid string index.</li>
+            <li>Confusing string concatenation with numeric addition.</li>
+            <li>Forgetting that string indexing starts from 0.</li>
+            <li>Trying to modify a string character directly.</li>
+            <li>Using the wrong spelling of string methods.</li>
+        </ul>
+
+        <div class="example">
+            <strong>Example:</strong>
+
+            <pre><code>age = 20
+
+# print("Age: " + age)  # Error
+
+print("Age: " + str(age))</code></pre>
+
+            <div class="output">
+                <strong>Output:</strong><br>
+                Age: 20
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 21 -->
+    <section class="note-section">
+        <h2>21. Practice Programs</h2>
+
+        <h3>Program 1: Count Characters</h3>
+
+        <pre><code>text = input("Enter a string: ")
+
+print("Length =", len(text))</code></pre>
+
+        <h3>Program 2: Convert to Uppercase</h3>
+
+        <pre><code>text = input("Enter a string: ")
+
+print(text.upper())</code></pre>
+
+        <h3>Program 3: Reverse a String</h3>
+
+        <pre><code>text = input("Enter a string: ")
+
+print(text[::-1])</code></pre>
+
+        <h3>Program 4: Check Palindrome</h3>
+
+        <pre><code>text = input("Enter a string: ")
+
+if text == text[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")</code></pre>
+
+        <h3>Program 5: Count Vowels</h3>
+
+        <pre><code>text = input("Enter a string: ")
+
+count = 0
+
+for ch in text:
+    if ch.lower() in "aeiou":
+        count += 1
+
+print("Vowels =", count)</code></pre>
+    </section>
+
+
+    <!-- 22 -->
+    <section class="note-section">
+        <h2>22. Chapter Summary</h2>
+
+        <ul>
+            <li>String is a sequence of characters.</li>
+            <li>Strings can use single, double or triple quotes.</li>
+            <li>Python uses zero-based indexing.</li>
+            <li>Negative indexing accesses characters from the end.</li>
+            <li>Slicing extracts a portion of a string.</li>
+            <li>Strings are immutable.</li>
+            <li>len() returns the length of a string.</li>
+            <li>+ joins strings.</li>
+            <li>* repeats strings.</li>
+            <li>Python provides many useful string methods.</li>
+            <li>Strings are widely used in AI and NLP.</li>
+        </ul>
+
+        <div class="important">
+            <strong>Exam Point:</strong>
+            Learn indexing, slicing, string methods, immutability,
+            concatenation and string formatting carefully.
+            These are important concepts for Python programming and
+            BCA(AI) practical examinations.
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 VijayKNotes | BCA(AI) Python Notes</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Python Conditional Statements - VijayKNotes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .notes-page {
+            max-width: 950px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .notes-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .notes-header h1 {
+            color: #5b35d5;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .notes-header p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .notes-box {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .notes-box h2 {
+            color: #5b35d5;
+            margin-bottom: 15px;
+        }
+
+        .notes-box h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .notes-box p {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .notes-box ul,
+        .notes-box ol {
+            line-height: 1.9;
+            color: #444;
+            padding-left: 25px;
+        }
+
+        .code-box {
+            background: #15151d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .output-box {
+            background: #f3f3f3;
+            border-left: 5px solid #5b35d5;
+            padding: 15px 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff7d6;
+            padding: 18px;
+            border-left: 5px solid #e6b800;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .tip {
+            background: #e9f7ef;
+            padding: 18px;
+            border-left: 5px solid #28a745;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #5b35d5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #4323ad;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #5b35d5;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .notes-header h1 {
+                font-size: 30px;
+            }
+
+            .notes-box {
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            📚 VijayKNotes
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="python.html">
+                Python Notes
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Notes -->
+
+    <main class="notes-page">
+
+        <div class="notes-header">
+
+            <h1>
+                🐍 Python Conditional Statements
+            </h1>
+
+            <p>
+                BCA (AI) — Python Programming — Chapter 4
+            </p>
+
+        </div>
+
+
+        <!-- 1 -->
+
+        <div class="notes-box">
+
+            <h2>
+                1. What are Conditional Statements?
+            </h2>
+
+            <p>
+                Conditional statements are used to make decisions
+                in a Python program. They allow a program to execute
+                different blocks of code depending on whether a
+                particular condition is True or False.
+            </p>
+
+            <p>
+                In simple words, a conditional statement tells the
+                computer what action should be performed when a
+                specific condition is satisfied.
+            </p>
+
+            <p>
+                Conditional statements are very important in
+                programming because real-world applications need
+                to make decisions based on different situations.
+            </p>
+
+            <div class="important">
+                <b>Example:</b> If a student's marks are greater
+                than or equal to 40, the program can display
+                "Pass". Otherwise, it can display "Fail".
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="notes-box">
+
+            <h2>
+                2. Why are Conditional Statements Used?
+            </h2>
+
+            <p>
+                Conditional statements help a program make logical
+                decisions. Without conditions, a program would
+                execute instructions in the same sequence every time.
+            </p>
+
+            <p>
+                They are commonly used for checking age, marks,
+                passwords, login status, numbers, user choices,
+                eligibility and many other situations.
+            </p>
+
+            <h3>Common Uses</h3>
+
+            <ul>
+                <li>Checking whether a student has passed or failed.</li>
+                <li>Checking whether a number is positive or negative.</li>
+                <li>Checking voting eligibility.</li>
+                <li>Checking username and password.</li>
+                <li>Calculating grades.</li>
+                <li>Making decisions in AI and machine learning programs.</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="notes-box">
+
+            <h2>
+                3. Types of Conditional Statements in Python
+            </h2>
+
+            <p>
+                Python mainly provides the following conditional
+                statements:
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Statement</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <tr>
+                    <td>if</td>
+                    <td>Executes code when a condition is True.</td>
+                </tr>
+
+                <tr>
+                    <td>if-else</td>
+                    <td>Chooses between two alternatives.</td>
+                </tr>
+
+                <tr>
+                    <td>if-elif-else</td>
+                    <td>Checks multiple conditions.</td>
+                </tr>
+
+                <tr>
+                    <td>Nested if</td>
+                    <td>Places one if statement inside another.</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="notes-box">
+
+            <h2>
+                4. if Statement
+            </h2>
+
+            <p>
+                The <b>if</b> statement is the simplest conditional
+                statement in Python. It executes a block of code
+                only when the given condition is True.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <div class="code-box">
+
+<pre>
+if condition:
+    statement
+</pre>
+
+            </div>
+
+            <p>
+                Notice the colon (:) after the condition.
+                Python uses indentation to identify the block
+                of code that belongs to the if statement.
+            </p>
+
+            <h3>Example 1: Checking Age</h3>
+
+            <div class="code-box">
+
+<pre>
+age = 20
+
+if age >= 18:
+    print("You are an adult")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                You are an adult
+            </div>
+
+            <h3>Example 2: Checking Positive Number</h3>
+
+            <div class="code-box">
+
+<pre>
+number = 10
+
+if number > 0:
+    print("Positive number")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Positive number
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="notes-box">
+
+            <h2>
+                5. if-else Statement
+            </h2>
+
+            <p>
+                The <b>if-else</b> statement is used when there are
+                two possible outcomes. If the condition is True,
+                the if block is executed. If the condition is False,
+                the else block is executed.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <div class="code-box">
+
+<pre>
+if condition:
+    statement1
+else:
+    statement2
+</pre>
+
+            </div>
+
+            <h3>Example 1: Pass or Fail</h3>
+
+            <div class="code-box">
+
+<pre>
+marks = 65
+
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Pass
+            </div>
+
+            <h3>Example 2: Even or Odd</h3>
+
+            <div class="code-box">
+
+<pre>
+number = 8
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Even
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="notes-box">
+
+            <h2>
+                6. if-elif-else Statement
+            </h2>
+
+            <p>
+                The <b>if-elif-else</b> statement is used when a
+                program needs to check more than two conditions.
+            </p>
+
+            <p>
+                Python checks the conditions from top to bottom.
+                When it finds the first True condition, its block
+                is executed and the remaining conditions are skipped.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <div class="code-box">
+
+<pre>
+if condition1:
+    statement
+elif condition2:
+    statement
+else:
+    statement
+</pre>
+
+            </div>
+
+            <h3>Example: Grade Calculation</h3>
+
+            <div class="code-box">
+
+<pre>
+marks = 85
+
+if marks >= 90:
+    print("Grade A+")
+elif marks >= 80:
+    print("Grade A")
+elif marks >= 70:
+    print("Grade B")
+elif marks >= 60:
+    print("Grade C")
+else:
+    print("Grade D")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Grade A
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="notes-box">
+
+            <h2>
+                7. Nested if Statement
+            </h2>
+
+            <p>
+                A nested if statement means an <b>if statement
+                inside another if statement</b>.
+            </p>
+
+            <p>
+                Nested conditions are useful when the second
+                condition should be checked only after the first
+                condition becomes True.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+age = 20
+has_id = True
+
+if age >= 18:
+
+    if has_id:
+        print("Entry allowed")
+    else:
+        print("ID is required")
+
+else:
+    print("Entry not allowed")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Entry allowed
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="notes-box">
+
+            <h2>
+                8. Comparison Operators with Conditions
+            </h2>
+
+            <p>
+                Comparison operators are frequently used with
+                conditional statements. They compare two values
+                and return either True or False.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>==</td>
+                    <td>Equal to</td>
+                </tr>
+
+                <tr>
+                    <td>!=</td>
+                    <td>Not equal to</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;</td>
+                    <td>Greater than</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;</td>
+                    <td>Less than</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=</td>
+                    <td>Greater than or equal to</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;=</td>
+                    <td>Less than or equal to</td>
+                </tr>
+
+            </table>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+a = 10
+b = 20
+
+if a < b:
+    print("a is smaller than b")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                a is smaller than b
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="notes-box">
+
+            <h2>
+                9. Logical Operators with Conditions
+            </h2>
+
+            <p>
+                Logical operators are used to combine two or more
+                conditions.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>and</td>
+                    <td>True when all conditions are True.</td>
+                </tr>
+
+                <tr>
+                    <td>or</td>
+                    <td>True when at least one condition is True.</td>
+                </tr>
+
+                <tr>
+                    <td>not</td>
+                    <td>Reverses the result of a condition.</td>
+                </tr>
+
+            </table>
+
+            <h3>Example using and</h3>
+
+            <div class="code-box">
+
+<pre>
+age = 20
+marks = 75
+
+if age >= 18 and marks >= 40:
+    print("Eligible")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Eligible
+            </div>
+
+            <h3>Example using or</h3>
+
+            <div class="code-box">
+
+<pre>
+day = "Sunday"
+
+if day == "Sunday" or day == "Saturday":
+    print("Weekend")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Weekend
+            </div>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="notes-box">
+
+            <h2>
+                10. Real-Life Example — Voting Eligibility
+            </h2>
+
+            <p>
+                Conditional statements can be used to check whether
+                a person is eligible to vote based on their age.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+age = 21
+
+if age >= 18:
+    print("You are eligible to vote")
+else:
+    print("You are not eligible to vote")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                You are eligible to vote
+            </div>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="notes-box">
+
+            <h2>
+                11. Finding the Largest of Two Numbers
+            </h2>
+
+            <p>
+                Conditional statements can compare two numbers
+                and determine which number is larger.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+a = 50
+b = 30
+
+if a > b:
+    print("a is greater")
+else:
+    print("b is greater")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                a is greater
+            </div>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="notes-box">
+
+            <h2>
+                12. Conditional Statements in AI
+            </h2>
+
+            <p>
+                Conditional statements are also useful in
+                Artificial Intelligence programs. An AI system
+                often needs to make decisions based on input data
+                or conditions.
+            </p>
+
+            <p>
+                For example, a simple AI-based system may classify
+                a value into different categories depending on
+                certain conditions.
+            </p>
+
+            <h3>Simple Example</h3>
+
+            <div class="code-box">
+
+<pre>
+score = 85
+
+if score >= 80:
+    print("High score")
+elif score >= 50:
+    print("Medium score")
+    else:
+    print("Low score")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                High score
+            </div>
+
+            <div class="tip">
+                <b>BCA (AI) Point:</b>
+                Conditional logic is a basic programming concept
+                used before learning more advanced AI and Machine
+                Learning algorithms.
+            </div>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="notes-box">
+
+            <h2>
+                13. Common Mistakes
+            </h2>
+
+            <ul>
+                <li>Forgetting the colon (:) after if, elif or else.</li>
+                <li>Using = instead of == for comparison.</li>
+                <li>Incorrect indentation.</li>
+                <li>Writing

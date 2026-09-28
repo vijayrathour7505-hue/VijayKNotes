@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Python Functions - VijayKNotes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .notes-page {
+            max-width: 950px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .notes-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .notes-header h1 {
+            color: #5b35d5;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .notes-header p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .notes-box {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .notes-box h2 {
+            color: #5b35d5;
+            margin-bottom: 15px;
+        }
+
+        .notes-box h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .notes-box p {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .notes-box ul,
+        .notes-box ol {
+            line-height: 1.9;
+            color: #444;
+            padding-left: 25px;
+        }
+
+        .code-box {
+            background: #15151d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .output-box {
+            background: #f3f3f3;
+            border-left: 5px solid #5b35d5;
+            padding: 15px 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        .important {
+            background: #fff7d6;
+            padding: 18px;
+            border-left: 5px solid #e6b800;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .tip {
+            background: #e9f7ef;
+            padding: 18px;
+            border-left: 5px solid #28a745;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #5b35d5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #4323ad;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #5b35d5;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .notes-header h1 {
+                font-size: 30px;
+            }
+
+            .notes-box {
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            📚 VijayKNotes
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="python.html">Python Notes</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Notes -->
+
+    <main class="notes-page">
+
+        <div class="notes-header">
+
+            <h1>🐍 Python Functions</h1>
+
+            <p>
+                BCA (AI) — Python Programming — Chapter 6
+            </p>
+
+        </div>
+
+
+        <!-- 1 -->
+
+        <div class="notes-box">
+
+            <h2>1. What is a Function?</h2>
+
+            <p>
+                A function is a reusable block of code that performs
+                a specific task. Instead of writing the same code
+                repeatedly, we can define it once inside a function
+                and call it whenever required.
+            </p>
+
+            <p>
+                Functions make programs easier to understand,
+                organize, test and maintain. They are an important
+                concept in structured and modular programming.
+            </p>
+
+            <div class="important">
+                <b>Simple Definition:</b>
+                A function is a block of reusable code designed
+                to perform a particular task.
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="notes-box">
+
+            <h2>2. Why are Functions Used?</h2>
+
+            <p>
+                Functions help programmers divide a large program
+                into smaller and manageable parts. Each function
+                can perform a particular operation.
+            </p>
+
+            <h3>Advantages of Functions</h3>
+
+            <ul>
+                <li>Code reusability.</li>
+                <li>Reduces code repetition.</li>
+                <li>Makes programs easier to understand.</li>
+                <li>Makes debugging easier.</li>
+                <li>Improves program organization.</li>
+                <li>Makes testing easier.</li>
+                <li>Useful for large software projects.</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="notes-box">
+
+            <h2>3. Types of Functions in Python</h2>
+
+            <p>
+                Python functions can be broadly divided into
+                two categories.
+            </p>
+
+            <table>
+
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+
+                <tr>
+                    <td>Built-in Functions</td>
+                    <td>
+                        Functions already provided by Python.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>User-defined Functions</td>
+                    <td>
+                        Functions created by the programmer.
+                    </td>
+                </tr>
+
+            </table>
+
+            <h3>Examples of Built-in Functions</h3>
+
+            <div class="code-box">
+
+<pre>
+print("Hello")
+len("Python")
+max(10, 20, 30)
+min(10, 20, 30)
+sum([10, 20, 30])
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="notes-box">
+
+            <h2>4. Creating a Function</h2>
+
+            <p>
+                In Python, a function is created using the
+                <b>def</b> keyword.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <div class="code-box">
+
+<pre>
+def function_name():
+    statement
+</pre>
+
+            </div>
+
+            <p>
+                The function name should describe what the function
+                does. The statements inside the function must be
+                properly indented.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def greet():
+    print("Hello, Vijay!")
+
+greet()
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Hello, Vijay!
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="notes-box">
+
+            <h2>5. Function with Parameters</h2>
+
+            <p>
+                A parameter is a variable specified inside the
+                parentheses of a function definition. Parameters
+                allow us to pass data to a function.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def greet(name):
+    print("Hello", name)
+
+greet("Vijay")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Hello Vijay
+            </div>
+
+            <p>
+                Here, <b>name</b> is a parameter and
+                <b>"Vijay"</b> is the value passed to the function.
+            </p>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="notes-box">
+
+            <h2>6. Function with Multiple Parameters</h2>
+
+            <p>
+                A function can accept more than one parameter.
+                Multiple parameters are separated by commas.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                30
+            </div>
+
+            <h3>Another Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student("Vijay", 20)
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Name: Vijay<br>
+                Age: 20
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="notes-box">
+
+            <h2>7. return Statement</h2>
+
+            <p>
+                The <b>return</b> statement is used to send a value
+                back from a function to the place where the function
+                was called.
+            </p>
+
+            <p>
+                A function can calculate a result and return it
+                instead of directly printing the result.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                30
+            </div>
+
+            <div class="important">
+                <b>Important:</b>
+                print() displays a value, while return sends a
+                value back from the function.
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="notes-box">
+
+            <h2>8. Function with Default Arguments</h2>
+
+            <p>
+                A default argument is a parameter that already has
+                a default value. If the user does not provide a
+                value, Python uses the default value.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def greet(name="Student"):
+    print("Hello", name)
+
+greet()
+greet("Vijay")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Hello Student<br>
+                Hello Vijay
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="notes-box">
+
+            <h2>9. Keyword Arguments</h2>
+
+            <p>
+                Keyword arguments allow us to pass values to a
+                function by explicitly specifying the parameter name.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student(age=20, name="Vijay")
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Name: Vijay<br>
+                Age: 20
+            </div>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="notes-box">
+
+            <h2>10. Positional Arguments</h2>
+
+            <p>
+                In positional arguments, values are assigned to
+                parameters according to their position.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+def student(name, age):
+    print(name)
+    print(age)
+
+student("Vijay", 20)
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Vijay<br>
+                20
+            </div>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="notes-box">
+
+            <h2>11. Function Returning Multiple Values</h2>
+
+            <p>
+                Python allows a function to return multiple values.
+                These values are commonly returned together as a tuple.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+def calculate(a, b):
+
+    addition = a + b
+    multiplication = a * b
+
+    return addition, multiplication
+
+
+x, y = calculate(10, 5)
+
+print("Addition:", x)
+print("Multiplication:", y)
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Addition: 15<br>
+                Multiplication: 50
+            </div>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="notes-box">
+
+            <h2>12. Local and Global Variables</h2>
+
+            <p>
+                A variable created inside a function is generally
+                called a <b>local variable</b>. It can normally be
+                accessed only inside that function.
+            </p>
+
+            <p>
+                A variable created outside functions is called a
+                <b>global variable</b> and can be accessed from
+                different parts of the program.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+name = "Vijay"
+
+def show():
+    age = 20
+
+    print(name)
+    print(age)
+
+show()
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Vijay<br>
+                20
+            </div>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="notes-box">
+
+            <h2>13. Recursive Function</h2>
+
+            <p>
+                A recursive function is a function that calls itself.
+                Recursion is useful for solving problems that can
+                be divided into smaller similar problems.
+            </p>
+
+            <h3>Example: Factorial</h3>
+
+            <div class="code-box">
+
+<pre>
+def factorial(n):
+
+    if n == 0:
+        return 1
+
+    return n * factorial(n - 1)
+
+
+print(factorial(5))
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                120
+            </div>
+
+            <div class="important">
+                <b>Important:</b>
+                A recursive function should have a proper base
+                condition to stop recursion.
+            </div>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="notes-box">
+
+            <h2>14. Lambda Function</h2>
+
+            <p>
+                A lambda function is a small anonymous function.
+                It can have any number of arguments but generally
+                contains a single expression.
+            </p>
+
+            <h3>Syntax</h3>
+
+            <div class="code-box">
+
+<pre>
+lambda arguments: expression
+</pre>
+
+            </div>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+square = lambda x: x * x
+
+print(square(5))
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                25
+            </div>
+
+        </div>
+
+
+        <!-- 15 -->
+
+        <div class="notes-box">
+
+            <h2>15. Function Calling Another Function</h2>
+
+            <p>
+                One function can call another function. This helps
+                divide a large task into smaller logical operations.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+def message():
+    print("Welcome to VijayKNotes")
+
+
+def start():
+    message()
+    print("Python Functions")
+
+
+start()
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Welcome to VijayKNotes<br>
+                Python Functions
+            </div>
+
+        </div>
+
+
+        <!-- 16 -->
+
+        <div class="notes-box">
+
+            <h2>16. Functions in AI and Data Processing</h2>
+
+            <p>
+                Functions are extremely important in Artificial
+                Intelligence and Machine Learning programs.
+                Large AI programs are divided into smaller functions
+                so that each function can perform a specific task.
+            </p>
+
+            <p>
+                For example, separate functions can be created for
+                data cleaning, calculations, prediction and result
+                processing.
+            </p>
+
+            <h3>Simple Example</h3>
+
+            <div class="code-box">
+
+<pre>
+def calculate_average(numbers):
+
+    total = sum(numbers)
+
+    return total / len(numbers)
+
+
+marks = [80, 75, 90, 85]
+
+average = calculate_average(marks)
+
+print("Average:", average)
+</pre>
+
+            </div>
+
+            <div class="output-box">
+                <b>Output:</b><br>
+                Average: 82.5
+            </div>
+
+            <div class="tip">
+                <b>BCA (AI) Point:</b>
+                Functions are used extensively when building
+                data-processing pipelines and machine-learning
+                programs.
+            </div>
+
+        </div>
+
+
+        <!-- 17 -->
+
+        <div class="notes-box">
+
+            <h2>17. Common Mistakes in Functions</h2>
+
+            <ul>
+                <li>Forgetting the <b>def</b> keyword.</li>
+                <li>Forgetting parentheses.</li>
+                <li>Forgetting the colon after the function definition.</li>
+                <li>Incorrect indentation.</li>
+                <li>Calling a function with the wrong number of arguments.</li>
+                <li>Confusing print() with return.</li>
+                <li>Forgetting to call the function after defining it.</li>
+            </ul>
+
+            <div class="important">
+                <b>Remember:</b>
+                Defining a function does not execute it.
+                The function must be called to execute its code.
+            </div>
+
+        </div>
+
+
+        <!-- 18 -->
+
+        <div class="notes-box">
+
+            <h2>18. Practice Programs</h2>
+
+            <ol>
+                <li>Create a function to add two numbers.</li>
+                <li>Create a function to find the square of a number.</li>
+                <li>Create a function to check even or odd.</li>
+                <li>Create a function to find the largest of two numbers.</li>
+                <li>Create a function to calculate factorial.</li>
+                <li>Create a function to calculate average marks.</li>
+                <li>Create a function to check whether a number is prime.</li>
+                <li>Create a function to reverse a string.</li>
+                <li>Create a function to count vowels in a string.</li>
+                <li>Create a function to find the largest element in a list.</li>
+            </ol>
+
+        </div>
+
+
+        <!-- 19 -->
+
+        <div class="notes-box">
+
+            <h2>19. Chapter Summary</h2>
+
+            <p>
+                Functions are reusable blocks of code that perform
+                specific tasks. They make Python programs modular,
+                organized and easier to maintain.
+            </p>
+
+            <ul>
+                <li><b>def</b> is used to create a function.</li>
+                <li>Parameters receive values inside a function.</li>
+                <li>Arguments are values passed when calling a function.</li>
+                <li><b>return</b> sends a value back from a function.</li>
+                <li>Default arguments provide predefined values.</li>
+                <li>Lambda functions are small anonymous functions.</li>
+                <li>Recursive functions can call themselves.</li>
+                <li>Functions are essential in AI and Machine Learning.</li>
+            </ul>
+
+        </div>
+
+
+        <!-- Back Button -->
+
+        <a href="python.html" class="back-button">
+            ← Back to Python Notes
+        </a>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 VijayKNotes</p>
+
+        <p>Made with ❤️ for Students</p>
+
+    </footer>
+
+</body>
+
+</html>
+

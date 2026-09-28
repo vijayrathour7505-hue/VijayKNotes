@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Python Operators - VijayKNotes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .notes-page {
+            max-width: 950px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .notes-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .notes-header h1 {
+            color: #5b35d5;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .notes-header p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .notes-box {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .notes-box h2 {
+            color: #5b35d5;
+            margin-bottom: 15px;
+        }
+
+        .notes-box h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .notes-box p {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .notes-box ul {
+            line-height: 1.9;
+            color: #444;
+            padding-left: 25px;
+        }
+
+        .operator-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .operator-table th,
+        .operator-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .operator-table th {
+            background: #eeeafe;
+            color: #5b35d5;
+        }
+
+        .code-box {
+            background: #15151d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .result-box {
+            background: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #5b35d5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #4323ad;
+        }
+
+        @media (max-width: 600px) {
+
+            .notes-header h1 {
+                font-size: 32px;
+            }
+
+            .operator-table {
+                font-size: 14px;
+            }
+
+            .operator-table th,
+            .operator-table td {
+                padding: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            📚 VijayKNotes
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="python.html">
+                Python Notes
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Notes -->
+
+    <main class="notes-page">
+
+
+        <!-- Heading -->
+
+        <div class="notes-header">
+
+            <h1>
+                🐍 Python Operators
+            </h1>
+
+            <p>
+                Python Programming — Chapter 3
+            </p>
+
+        </div>
+
+
+        <!-- Introduction -->
+
+        <div class="notes-box">
+
+            <h2>
+                1. What are Operators?
+            </h2>
+
+            <p>
+                Operators are special symbols or keywords
+                used to perform operations on values and
+                variables.
+            </p>
+
+            <p>
+                For example, the <b>+</b> operator is used
+                for addition and the <b>></b> operator is
+                used for comparison.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+a = 10
+b = 5
+
+print(a + b)
+</pre>
+
+            </div>
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+15
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Types -->
+
+        <div class="notes-box">
+
+            <h2>
+                2. Types of Python Operators
+            </h2>
+
+            <p>
+                Python provides several types of operators:
+            </p>
+
+            <ul>
+
+                <li>Arithmetic Operators</li>
+
+                <li>Assignment Operators</li>
+
+                <li>Comparison Operators</li>
+
+                <li>Logical Operators</li>
+
+                <li>Identity Operators</li>
+
+                <li>Membership Operators</li>
+
+                <li>Bitwise Operators</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Arithmetic -->
+
+        <div class="notes-box">
+
+            <h2>
+                3. Arithmetic Operators
+            </h2>
+
+            <p>
+                Arithmetic operators are used to perform
+                mathematical operations.
+            </p>
+
+            <table class="operator-table">
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Name</th>
+                    <th>Example</th>
+                </tr>
+
+                <tr>
+                    <td>+</td>
+                    <td>Addition</td>
+                    <td>a + b</td>
+                </tr>
+
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction</td>
+                    <td>a - b</td>
+                </tr>
+
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication</td>
+                    <td>a * b</td>
+                </tr>
+
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                    <td>a / b</td>
+                </tr>
+
+                <tr>
+                    <td>%</td>
+                    <td>Modulus</td>
+                    <td>a % b</td>
+                </tr>
+
+                <tr>
+                    <td>**</td>
+                    <td>Exponentiation</td>
+                    <td>a ** b</td>
+                </tr>
+
+                <tr>
+                    <td>//</td>
+                    <td>Floor Division</td>
+                    <td>a // b</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+a = 10
+b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a % b)
+print(a ** b)
+print(a // b)
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+13
+7
+30
+3.3333333333333335
+1
+1000
+3
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Assignment -->
+
+        <div class="notes-box">
+
+            <h2>
+                4. Assignment Operators
+            </h2>
+
+            <p>
+                Assignment operators are used to assign
+                values to variables.
+            </p>
+
+            <table class="operator-table">
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Example</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>=</td>
+                    <td>x = 5</td>
+                    <td>Assign</td>
+                </tr>
+
+                <tr>
+                    <td>+=</td>
+                    <td>x += 5</td>
+                    <td>x = x + 5</td>
+                </tr>
+
+                <tr>
+                    <td>-=</td>
+                    <td>x -= 5</td>
+                    <td>x = x - 5</td>
+                </tr>
+
+                <tr>
+                    <td>*=</td>
+                    <td>x *= 5</td>
+                    <td>x = x * 5</td>
+                </tr>
+
+                <tr>
+                    <td>/=</td>
+                    <td>x /= 5</td>
+                    <td>x = x / 5</td>
+                </tr>
+
+                <tr>
+                    <td>%=</td>
+                    <td>x %= 5</td>
+                    <td>x = x % 5</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+x = 10
+
+x += 5
+
+print(x)
+
+x -= 3
+
+print(x)
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+15
+12
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Comparison -->
+
+        <div class="notes-box">
+
+            <h2>
+                5. Comparison Operators
+            </h2>
+
+            <p>
+                Comparison operators compare two values.
+                The result is either True or False.
+            </p>
+
+            <table class="operator-table">
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>==</td>
+                    <td>Equal to</td>
+                </tr>
+
+                <tr>
+                    <td>!=</td>
+                    <td>Not equal to</td>
+                </tr>
+
+                <tr>
+                    <td>></td>
+                    <td>Greater than</td>
+                </tr>
+
+                <tr>
+                    <td><</td>
+                    <td>Less than</td>
+                </tr>
+
+                <tr>
+                    <td>>=</td>
+                    <td>Greater than or equal to</td>
+                </tr>
+
+                <tr>
+                    <td><=</td>
+                    <td>Less than or equal to</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+a = 10
+b = 5
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+False
+True
+True
+False
+True
+False
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Logical -->
+
+        <div class="notes-box">
+
+            <h2>
+                6. Logical Operators
+            </h2>
+
+            <p>
+                Logical operators are used to combine
+                conditional statements.
+            </p>
+
+            <table class="operator-table">
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>and</td>
+                    <td>Returns True if both conditions are True</td>
+                </tr>
+
+                <tr>
+                    <td>or</td>
+                    <td>Returns True if at least one condition is True</td>
+                </tr>
+
+                <tr>
+                    <td>not</td>
+                    <td>Reverses the result</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+age = 20
+
+print(age > 18 and age < 30)
+
+print(age > 25 or age == 20)
+
+print(not(age > 18))
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+True
+True
+False
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Identity -->
+
+        <div class="notes-box">
+
+            <h2>
+                7. Identity Operators
+            </h2>
+
+            <p>
+                Identity operators are used to check
+                whether two variables refer to the same
+                object.
+            </p>
+
+            <table class="operator-table">
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>is</td>
+                    <td>Returns True if objects are the same</td>
+                </tr>
+
+                <tr>
+                    <td>is not</td>
+                    <td>Returns True if objects are different</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+a = [1, 2, 3]
+b = a
+
+print(a is b)
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+True
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Membership -->
+
+        <div class="notes-box">
+
+            <h2>
+                8. Membership Operators
+            </h2>
+
+            <p>
+                Membership operators are used to check
+                whether a value exists in a sequence.
+            </p>
+
+            <table class="operator-table">
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Meaning</th>
+                </tr>
+
+                <tr>
+                    <td>in</td>
+                    <td>Returns True if value exists</td>
+                </tr>
+
+                <tr>
+                    <td>not in</td>
+                    <td>Returns True if value does not exist</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+numbers = [10, 20, 30, 40]
+
+print(20 in numbers)
+
+print(50 not in numbers)
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+True
+True
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bitwise -->
+
+        <div class="notes-box">
+
+            <h2>
+                9. Bitwise Operators
+            </h2>
+
+            <p>
+                Bitwise operators work on the binary
+                representation of numbers.
+            </p>
+
+            <table class="operator-table">
+
+                <tr>
+                    <th>Operator</th>
+                    <th>Name</th>
+                </tr>
+
+                <tr>
+                    <td>&</td>
+                    <td>AND</td>
+                </tr>
+
+                <tr>
+                    <td>|</td>
+                    <td>OR</td>
+                </tr>
+
+                <tr>
+                    <td>^</td>
+                    <td>XOR</td>
+                </tr>
+
+                <tr>
+                    <td>~</td>
+                    <td>NOT</td>
+                </tr>
+
+                <tr>
+                    <td><<</td>
+                    <td>Left Shift</td>
+                </tr>
+
+                <tr>
+                    <td>>></td>
+                    <td>Right Shift</td>
+                </tr>
+
+            </table>
+
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+a = 5
+b = 3
+
+print(a & b)
+print(a | b)
+print(a ^ b)
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+1
+7
+6
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Operator Precedence -->
+
+        <div class="notes-box">
+
+            <h2>
+                10. Operator Precedence
+            </h2>
+
+            <p>
+                Operator precedence determines the order
+                in which operations are performed.
+            </p>
+
+            <p>
+                Multiplication and division are performed
+                before addition and subtraction.
+            </p>
+
+            <h3>Example</h3>
+
+            <div class="code-box">
+
+<pre>
+result = 10 + 5 * 2
+
+print(result)
+</pre>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <b>Output:</b>
+
+<pre>
+20
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Practice -->
+
+        <div class="notes-box">
+
+            <h2>
+                11. Practice Program
+            </h2>
+
+            <p>
+                Write a Python program to perform basic
+                arithmetic operations on two numbers.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+a = 20
+b = 10
+
+print("Addition =", a + b)
+print("Subtraction =", a - b)
+print("Multiplication =", a * b)
+print("Division =", a / b)
+print("Modulus =", a % b)
+</pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- Summary -->
+
+        <div class="notes-box">
+
+            <h2>
+                12. Summary
+            </h2>
+
+            <ul>
+
+                <li>
+                    Arithmetic operators perform mathematical operations.
+                </li>
+
+                <li>
+                    Assignment operators assign values to variables.
+                </li>
+
+                <li>
+                    Comparison operators compare values.
+                </li>
+
+                <li>
+                    Logical operators combine conditions.
+                </li>
+
+                <li>
+                    Identity operators compare object identity.
+                </li>
+
+                <li>
+                    Membership operators check whether a value exists.
+                </li>
+
+                <li>
+                    Bitwise operators work with binary values.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Back -->
+
+        <a href="python.html" class="back-button">
+            ← Back to Python Notes
+        </a>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 VijayKNotes
+        </p>
+
+        <p>
+            Made with ❤️ for Students
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
